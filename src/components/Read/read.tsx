@@ -86,7 +86,7 @@ const Read = () => {
                 <th>User Id</th>
                 <th>Title</th>
                 <th>Body</th>
-                <th>Upate</th>
+                <th>Update</th>
                 <th>Delete</th>
               </tr>
             </thead>

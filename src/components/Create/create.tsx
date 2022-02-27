@@ -1,12 +1,14 @@
 import styles from "./create.module.scss";
 import { FormEvent, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [userId, setUserId] = useState("");
   const [submitLoading, setSubmitLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const Create = () => {
       })
       .then((data) => {
         console.log(data);
+        navigate("/read");
       })
       .catch((error) => {
         alert("successdd");
